@@ -1,0 +1,153 @@
+<div >
+<app-sidebar  *ngIf="user"></app-sidebar>
+<main class="main-content " >
+          <div class="main-navbar col-lg-12 col-md-12 col-sm-12 p-0 sticky-top bg-white " *ngIf="user">
+            <nav class="navbar navbar-light flex-md-nowrap " >
+              <nav class="nav" >
+                <a
+                  href="#"
+                  class="nav-link nav-link-icon toggle-sidebar d-md-inline text-center"
+                  data-toggle="collapse"
+                  data-target=".header-navbar"
+                  aria-expanded="false"
+                  aria-controls="header-navbar"
+                  (click)="sideNavService.toggleSideNav()"
+                >
+                  <i class="material-icons">&#xE5D2;</i>
+                </a>
+              </nav>
+              <div class="ml-50">
+                <!-- <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="images/shards-dashboards-logo.svg" alt="Shards Dashboard">-->
+                <a class="navbar-brand w-100 mr-2"
+                href="#"
+                style="line-height: 250px;">
+              <span class="d-none d-md-inline ">{{title}}</span>
+
+              </a>
+              </div>
+              <div class="w-100 d-none d-md-flex d-lg-flex"></div>
+              <ul class="navbar-nav border-left flex-row">
+                <li class="nav-item dropdown border-right">
+                  <a
+                    class="nav-link dropdown-toggle text-nowrap px-4 pt-3"
+                    data-toggle="dropdown"
+                    href="#"
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="fas fa-cog"></i>
+                    <span class="d-none d-md-inline-block">Projects </span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-small">
+                    <a class="dropdown-item" href="#">
+                      <i class="material-icons">&#xE7FD;</i> Project 1</a
+                    >
+                    <a class="dropdown-item" href="#">
+                      <i class="material-icons">vertical_split</i> Project 2</a
+                    >
+                    <a class="dropdown-item" href="#">
+                      <i class="material-icons">note_add</i> Project 3</a
+                    >
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="#">
+                      <i class="material-icons text-danger">&#xE879;</i> Add New
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item border-right dropdown notifications">
+                  <a
+                    class="nav-link nav-link-icon text-center"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <div class="nav-link-icon__wrapper">
+                      <i class="material-icons">&#xE7F4;</i>
+                      <span class="badge badge-pill badge-danger">2</span>
+                    </div>
+                  </a>
+                  <div
+                    class="dropdown-menu dropdown-menu-small"
+                    aria-labelledby="dropdownMenuLink"
+                  >
+                    <a class="dropdown-item" href="#">
+                      <div class="notification__icon-wrapper">
+                        <div class="notification__icon">
+                          <i class="material-icons">&#xE6E1;</i>
+                        </div>
+                      </div>
+                      <div class="notification__content">
+                        <span class="notification__category">Execution</span>
+                        <p>
+                          Your Last Test excution results for suite
+                          <span class="text-danger text-semibold">
+                            Rates_Regresion
+                          </span>
+                          are available.
+                        </p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <div class="notification__icon-wrapper">
+                        <div class="notification__icon">
+                          <i class="material-icons">&#xE8D1;</i>
+                        </div>
+                      </div>
+                      <div class="notification__content">
+                        <span class="notification__category">Analytics</span>
+                        <p>
+                          You can run analytics on the execution logs.
+                        </p>
+                      </div>
+                    </a>
+                    <a
+                      class="dropdown-item notification__all text-center"
+                      href="#"
+                    >
+                      View all Notifications
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-nowrap px-3"
+                    data-toggle="dropdown"
+                    href="#"
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <div class="avatar-circle-sm mr-2">
+                    <span class="initials">RB</span>  
+                    </div>
+
+                    <!-- <span class="d-none d-md-inline-block">User Name </span> -->
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-small">
+                    <a class="dropdown-item" href="user-profile-lite.html">
+                      <i class="material-icons">&#xE7FD;</i> Profile</a
+                    >
+                    <a class="dropdown-item" href="components-blog-posts.html">
+                      <i class="material-icons">vertical_split</i> Blog Posts</a
+                    >
+                    <a class="dropdown-item" href="add-new-post.html">
+                      <i class="material-icons">note_add</i> Add New Post</a
+                    >
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger"  (click)="logout()" href="#">
+                      <i class="material-icons text-danger">&#xE879;</i> Logout
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="main-content-container container-fluid px-4">
+          <router-outlet></router-outlet>
+          </div>
+</main>
+</div>

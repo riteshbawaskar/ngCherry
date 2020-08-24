@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cherry</title>
+    <meta
+    name="description"
+    content="A next generation automation framework."
+  />
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- bootstrap css -->
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <link
+    href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    id="main-stylesheet"
+    data-version="1.1.0"
+    href="styles/cherry.1.0.css"
+  />
+  <link rel="stylesheet" href="styles/extras.1.1.0.min.css" />
+   <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <style>
+      #loading-wrapper {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
+
+      #loading-text {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #999;
+        width: 100px;
+        height: 30px;
+        margin: -7px 0 0 -45px;
+        text-align: center;
+        font-family: "PT Sans Narrow", sans-serif;
+        font-size: 20px;
+      }
+
+      #loading-content {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 170px;
+        height: 170px;
+        margin: -85px 0 0 -85px;
+        border: 3px solid #f00;
+      }
+
+      #loading-content:after {
+        content: "";
+        position: absolute;
+        border: 3px solid #0f0;
+        left: 15px;
+        right: 15px;
+        top: 15px;
+        bottom: 15px;
+      }
+
+      #loading-content:before {
+        content: "";
+        position: absolute;
+        border: 3px solid #00f;
+        left: 5px;
+        right: 5px;
+        top: 5px;
+        bottom: 5px;
+      }
+
+      #loading-content {
+        border: 3px solid transparent;
+        border-top-color: #4d658d;
+        border-bottom-color: #4d658d;
+        border-radius: 50%;
+        -webkit-animation: loader 2s linear infinite;
+        -moz-animation: loader 2s linear infinite;
+        -o-animation: loader 2s linear infinite;
+        animation: loader 2s linear infinite;
+      }
+
+      #loading-content:before {
+        border: 3px solid transparent;
+        border-top-color: #d4cc6a;
+        border-bottom-color: #d4cc6a;
+        border-radius: 50%;
+        -webkit-animation: loader 3s linear infinite;
+        -moz-animation: loader 2s linear infinite;
+        -o-animation: loader 2s linear infinite;
+        animation: loader 3s linear infinite;
+      }
+
+      #loading-content:after {
+        border: 3px solid transparent;
+        border-top-color: #84417c;
+        border-bottom-color: #84417c;
+        border-radius: 50%;
+        -webkit-animation: loader 1.5s linear infinite;
+        animation: loader 1.5s linear infinite;
+        -moz-animation: loader 2s linear infinite;
+        -o-animation: loader 2s linear infinite;
+      }
+
+      @-webkit-keyframes loaders {
+        0% {
+          -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes loader {
+        0% {
+          -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+
+      #content-wrapper {
+        color: #fff;
+        position: fixed;
+        left: 0;
+        top: 20px;
+        width: 100%;
+        height: 100%;
+      }
+
+      #header {
+        width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        height: 100px;
+        background-color: #666;
+      }
+
+      #content {
+        width: 800px;
+        height: 1000px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <app>
+      <div id="loading-wrapper">
+        <div id="loading-text">LOADING</div>
+        <div id="loading-content"></div>
+      </div>
+    </app>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"
+  ></script>
+ <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <script src="https://unpkg.com/shards-ui@latest/dist/js/shards.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Sharrre/2.0.1/jquery.sharrre.min.js"></script>
+  <script src="scripts/extras.1.1.0.min.js"></script>
+  <script src="scripts/shards-dashboards.1.1.0.js"></script>
+  <script src="scripts/app/app-blog-overview.1.1.0.js"></script> -->
+  </body>
+</html>

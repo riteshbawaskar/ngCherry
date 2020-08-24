@@ -1,0 +1,33 @@
+<div class="mb-4" [formGroup]="listBoxForm">
+  <div class="card card-small">
+    <div class="card-header border-bottom">
+      <h6 class="m-0">Test Cases</h6>
+      <div class="float-right"> Add </div>
+      
+    </div>
+    <div class="card-body p-0">
+      <div class="form-group" >
+        <input
+          type="text"
+          class="form-control"
+          formControlName="availableSearchInput"
+          id="filter"
+          placeholder="Filter"
+          #availableSearchInput      
+        />
+      </div>
+
+      <div cdkDropList (cdkDropListDropped)="drop($event)">
+      <div  *ngFor="let test of tests | filter:availableSearchInput.value"  class="d-flex test" cdkDrag>
+            <div >
+              <div class="blog-comments__meta text-muted">
+              {{test.name}}
+            </div>
+           
+        </div>
+      </div>
+      </div>
+
+        </div>
+  </div>
+</div>

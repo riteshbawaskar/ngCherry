@@ -1,0 +1,23 @@
+<div class="page-header row no-gutters py-4">
+    <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+      <span class="text-uppercase page-subtitle">Design</span>
+      <h3 class="page-title">Test Design</h3>
+    </div>
+  </div>
+  <div>
+      <as-split 
+        class="split-example ex-percent"
+        unit="percent" 
+        [direction]="direction" 
+        (dragEnd)="dragEnd('percent', $event)">
+          <as-split-area size="30">
+              <app-design-suite></app-design-suite>
+          </as-split-area>
+          <as-split-area size="40">
+              <app-design-test></app-design-test>
+          </as-split-area>
+          <as-split-area size="40">
+            <app-design-step></app-design-step>
+        </as-split-area>
+      </as-split>
+  </div>
