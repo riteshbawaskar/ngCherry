@@ -23,12 +23,12 @@ export class DesignTestComponent implements OnInit {
 
   ngOnInit() {
     this.tests = [
-        { id: '1', name: 'Item 1'},
-        { id: '2', name: 'Item 2'},
-        { id: '3', name: 'Item 3'},
-        { id: '4', name: 'Item 4'},
-        { id: '5', name: 'Item 5'},
-        { id: '6', name: 'Item 6'},
+        { id: '1', name: 'OTC Generic HKMA New Amend Cancel', description: 'sample test case'},
+        { id: '2', name: 'QC# 20758 Rates Confirmation', description: 'sample test case'},
+        { id: '3', name: 'QC#18768 Finfrag Report Amend event', description: 'sample test case'},
+        { id: '4', name: 'QC16782 Credit Pay Rec Event Capture', description: 'sample test case'},
+        { id: '5', name: 'FX Swaption Report Amend Admin event', description: 'sample test case'},
+        { id: '6', name: 'EQD Index Swap New Amend Terminate' , description: 'sample test case'},
     ]
   }
 

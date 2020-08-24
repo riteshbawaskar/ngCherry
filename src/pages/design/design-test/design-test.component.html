@@ -18,10 +18,10 @@
       </div>
 
       <div cdkDropList (cdkDropListDropped)="drop($event)">
-      <div  *ngFor="let test of tests | filter:availableSearchInput.value"  class="d-flex test" cdkDrag>
+      <div  *ngFor="let test of tests | filter:availableSearchInput.value"  class="list-group d-flex " cdkDrag>
             <div >
-              <div class="blog-comments__meta text-muted">
-              {{test.name}}
+              <div class="list-group-item list-group-item-action">
+              {{test.id}}.{{test.name}}
             </div>
            
         </div>

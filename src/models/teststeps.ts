@@ -3,6 +3,6 @@ export class TestCase {
     suiteid: string;
     name: string;
     description: string;
-    enabled : boolean;
     tags:any[];
+    data:string;
   }
